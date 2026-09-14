@@ -14,4 +14,8 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Term3Prac1 {
 
+    //Algorithm 1
+    public static void Algorithm1(int [] arr){
+
+    }
 }
