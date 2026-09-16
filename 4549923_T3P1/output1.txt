@@ -1,0 +1,15 @@
+ALGORITHM 1
+----------------
+4 and -4 are in the array
+5 and -5 are in the array
+8 and -8 are in the array
+
+Number of pairs: 3
+
+ALGORITHM 2
+----------------
+-8 and 8 are in the array
+-5 and 5 are in the array
+-4 and 4 are in the array
+
+Number of pairs: 3

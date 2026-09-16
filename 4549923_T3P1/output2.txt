@@ -1,0 +1,83 @@
+ALGORITHM 1
+----------------
+1 and -1 are in the array
+2 and -2 are in the array
+3 and -3 are in the array
+4 and -4 are in the array
+5 and -5 are in the array
+6 and -6 are in the array
+7 and -7 are in the array
+8 and -8 are in the array
+9 and -9 are in the array
+10 and -10 are in the array
+11 and -11 are in the array
+12 and -12 are in the array
+13 and -13 are in the array
+14 and -14 are in the array
+15 and -15 are in the array
+16 and -16 are in the array
+17 and -17 are in the array
+18 and -18 are in the array
+19 and -19 are in the array
+21 and -21 are in the array
+22 and -22 are in the array
+23 and -23 are in the array
+24 and -24 are in the array
+25 and -25 are in the array
+26 and -26 are in the array
+28 and -28 are in the array
+30 and -30 are in the array
+33 and -33 are in the array
+35 and -35 are in the array
+36 and -36 are in the array
+37 and -37 are in the array
+38 and -38 are in the array
+40 and -40 are in the array
+47 and -47 are in the array
+80 and -80 are in the array
+88 and -88 are in the array
+92 and -92 are in the array
+
+Number of pairs: 37
+
+ALGORITHM 2
+----------------
+-92 and 92 are in the array
+-88 and 88 are in the array
+-80 and 80 are in the array
+-47 and 47 are in the array
+-40 and 40 are in the array
+-38 and 38 are in the array
+-37 and 37 are in the array
+-36 and 36 are in the array
+-35 and 35 are in the array
+-33 and 33 are in the array
+-30 and 30 are in the array
+-28 and 28 are in the array
+-26 and 26 are in the array
+-25 and 25 are in the array
+-24 and 24 are in the array
+-23 and 23 are in the array
+-22 and 22 are in the array
+-21 and 21 are in the array
+-19 and 19 are in the array
+-18 and 18 are in the array
+-17 and 17 are in the array
+-16 and 16 are in the array
+-15 and 15 are in the array
+-14 and 14 are in the array
+-13 and 13 are in the array
+-12 and 12 are in the array
+-11 and 11 are in the array
+-10 and 10 are in the array
+-9 and 9 are in the array
+-8 and 8 are in the array
+-7 and 7 are in the array
+-6 and 6 are in the array
+-5 and 5 are in the array
+-4 and 4 are in the array
+-3 and 3 are in the array
+-2 and 2 are in the array
+-1 and 1 are in the array
+
+Number of pairs: 37

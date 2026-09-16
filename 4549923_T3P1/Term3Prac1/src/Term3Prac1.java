@@ -11,6 +11,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.PrintStream;
 import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -84,6 +85,90 @@ public class Term3Prac1 {
                 .toArray();
     }
 
+    public static void runTimingExperiment() {
+
+        int[] sizes = {400, 800, 1600, 3200, 6400, 12800, 25600, 51200};
+        int trials = 15;
+        PrintStream consoleOut = System.out;
+
+        PrintStream nullStream = new PrintStream(new java.io.OutputStream() {
+            public void write(int b) {
+                // discard
+            }
+        });
+
+        System.setOut(nullStream);
+
+        for (int w = 0; w < 5; w++) {
+
+            int[] warm = generateRandomArray(5000, -1000, 1000);
+            Arrays.sort(warm);
+
+            PrintWriter warmOutput = new PrintWriter(nullStream);
+
+            Algorithm1(warm, warmOutput);
+            Algorithm2(warm, warmOutput);
+
+            warmOutput.flush();
+        }
+
+        System.setOut(consoleOut);
+
+        consoleOut.println(
+                "InputSize\tAlgorithm1_seconds\tAlgorithm2_seconds"
+        );
+
+        for (int n : sizes) {
+
+            long min1 = Long.MAX_VALUE;
+            long min2 = Long.MAX_VALUE;
+
+            for (int t = 0; t < trials; t++) {
+
+                int[] randomArray =
+                        generateRandomArray(n, -1000, 1000);
+
+                Arrays.sort(randomArray);
+
+                System.setOut(nullStream);
+
+                PrintWriter timingOutput =
+                        new PrintWriter(nullStream);
+
+
+                long start1 = System.nanoTime();
+
+                Algorithm1(randomArray, timingOutput);
+
+                long end1 = System.nanoTime();
+
+                min1 = Math.min(min1, end1 - start1);
+
+
+                long start2 = System.nanoTime();
+
+                Algorithm2(randomArray, timingOutput);
+
+                long end2 = System.nanoTime();
+
+                min2 = Math.min(min2, end2 - start2);
+
+
+                timingOutput.flush();
+
+                System.setOut(consoleOut);
+            }
+
+            double time1 = min1 / 1e9;
+            double time2 = min2 / 1e9;
+
+            consoleOut.println(
+                    n + "\t" + time1 + "\t" + time2
+            );
+        }
+
+        nullStream.close();
+    }
 
     public static void main(String[] args) {
 
@@ -189,6 +274,10 @@ public class Term3Prac1 {
             System.out.println("Algorithm 2 Runtime in nanoseconds: " + elapsedTime4);
             System.out.println("Algorithm 1 Runtime in seconds: " + (elapsedTime3 / 1e9));
             System.out.println("Algorithm 2 Runtime in seconds: " + (elapsedTime4 / 1e9));
+            System.out.println();
+            runTimingExperiment();
+
+            int[] randomArray = generateRandomArray(2000, -1000, 1000);
 
 
         } catch (IOException e) {
